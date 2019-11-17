@@ -33,8 +33,8 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" +
-                surname + ", " + "gPA=" + gPA + ", year=" + year + '}';
+        return "Student{name=" + name + ", surname="
+                + surname + ", " + "gPA=" + gPA + ", year=" + year + '}';
     }
 
     @Override
@@ -51,7 +51,9 @@ class Student {
         if (hashCode() != other.hashCode()) {
             return false;
         }
-        return getName().equals(((Student) obj).getName()) && getSurname().equals(((Student) obj).
-                getSurname()) && getgPA() == other.getgPA() && getYear() == other.getYear();
+        return getName().equals(((Student) obj).getName())
+                && getSurname().equals(((Student) obj).getSurname())
+                && getgPA() == other.getgPA()
+                && getYear() == other.getYear();
     }
 }

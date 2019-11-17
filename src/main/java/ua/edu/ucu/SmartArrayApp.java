@@ -68,16 +68,16 @@ public class SmartArrayApp {
         MyComparator compareBySurname = new MyComparator() {
             @Override
             public int compare(Object ob, Object obj) {
-                return ((Student) ob).getSurname().compareTo
-                        (((Student) obj).getSurname());
+                return ((Student) ob).getSurname().compareTo(((
+                        Student) obj).getSurname());
             }
         };
         SmartArray smartStudents = new BaseArray(students);
         smartStudents = new DistinctDecorator(smartStudents);
-        smartStudents = new FilterDecorator
-                (smartStudents, secondYearandGPA); // Result: [2, 1, 3];
-        smartStudents = new SortDecorator
-                (smartStudents, compareBySurname); // Result: [1, 2, 3]
+        smartStudents = new FilterDecorator(
+                smartStudents, secondYearandGPA); // Result: [2, 1, 3];
+        smartStudents = new SortDecorator(
+                smartStudents, compareBySurname); // Result: [1, 2, 3]
         smartStudents = new MapDecorator(smartStudents, getNameandSurname);
         //smartStudents = new MapDecorator(new SortDecorator
         // (new FilterDecorator(smartStudents, secondYearandGPA),
